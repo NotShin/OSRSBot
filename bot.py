@@ -7,9 +7,7 @@ from commands.ext.utils import GetGiveawayStatus, AddEntrant
 description        = '''Giveaway bot for the Old School RuneScape Discord.'''
 startup_extensions = ["commands.oldschool"]
 
-bot      = commands.Bot(command_prefix="!", description=description, pm_help=True)
-entrants = []
-active   = False
+bot = commands.Bot(command_prefix="!", description=description, pm_help=True)
 
 @bot.event
 async def on_ready():
