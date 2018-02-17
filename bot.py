@@ -45,7 +45,8 @@ async def on_message(message):
 	if message.content.startswith("!") and str(message.author.top_role) == "Admin":
 		await bot.process_commands(message)
 	if await GetGiveawayStatus():
-		await AddEntrant(message)
+		if str(message.author.top_role) != "Admin":
+			await AddEntrant(message)
 
 if __name__ == "__main__":
     for extension in startup_extensions:
