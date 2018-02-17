@@ -11,4 +11,4 @@ Link #2: https://discord.gg/uJFK5Qq
 
 !startgiveaway - Starts the giveaway and begins tracking user activity in all channels.
 
-!endgiveaway - Ends the giveaway and chooses a winner from the active list of users.
+!endgiveaway - Ends the giveaway and chooses a winner from the generated list of active users.
