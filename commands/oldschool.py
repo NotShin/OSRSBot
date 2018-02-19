@@ -20,6 +20,7 @@ class Oldschool():
 	@commands.cooldown(1, 3, commands.BucketType.user)
 	async def start(self, ctx):
 		""" Starts a giveaway. """
+		await ClearEntrants()
 		await GameMessage(self.OSRSBot, ctx.message, "Giveaway", self.giveaway)
 		await SetGiveawayOn()
 		return
@@ -34,7 +35,6 @@ class Oldschool():
 		else:
 			await GameMessage(self.OSRSBot, ctx.message, "Giveaway", "No winner was chosen as nobody entered the giveaway.")
 		await SetGiveawayOff()
-		await ClearEntrants()
 		return
 
 def setup(OSRSBot):
